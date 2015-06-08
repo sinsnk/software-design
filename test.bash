@@ -1,5 +1,7 @@
 #!/bin/bash
-echo "This is a Test."
-echo "AAAAA"
-
-exit 10
+tmp=/tmp/$$
+ERROR_EXIT () {
+echo "$1" >&2
+rm -f $tmp-*
+exit 1
+}
