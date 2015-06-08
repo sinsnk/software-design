@@ -2,4 +2,4 @@
 echo "This is a Test."
 echo "AAAAA"
 
-echo 10
+exit 10
