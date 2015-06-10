@@ -7,3 +7,6 @@ ERROR_EXIT () {
   rm -f $tmp-*
   exit 1
 }
+
+bash ./GreatestCommonDivisor.bash 24 32
+exit 0
