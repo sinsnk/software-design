@@ -7,7 +7,6 @@ ERROR_EXIT () {
   rm -f $tmp-*
   exit 1
 }
-su -
 chmod 711 ./GreatestCommonDivisor.bash
 ANS=$(bash ./GreatestCommonDivisor.bash 24 32)
 if [ "$ANS" -eq 8 ] ; then
