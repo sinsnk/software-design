@@ -9,7 +9,7 @@ ERROR_EXIT () {
 }
 
 ANS=$(./GreatestCommonDivisor.bash 24 32)
-if [ "$ANS" -eq 8 ] ; then
+if [ "$ANS" -eq 0 ] ; then
   exit 0
 else
   exit 1
