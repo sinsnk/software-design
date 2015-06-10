@@ -20,3 +20,6 @@ if [ "$ANS" -eq 5 ] ; then
 else
   exit 1
 fi
+
+# 変な値
+# bash ./GreatestCommonDivisor.bash hoge fuga
