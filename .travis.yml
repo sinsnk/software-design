@@ -1,6 +1,12 @@
-language: python
-python:
-- "2.7"
-- "2.6"
+# language: python
+# python:
+# - "2.7"
+# - "2.6"
+# script:
+# - bash ./test.bash
+
+language: bash
 script:
-- bash ./test.bash
+- bash ./GreatestCommonDivisor.bash 125 65
+script:
+- bash ./GreatestCommonDivisor.bash 42 36
