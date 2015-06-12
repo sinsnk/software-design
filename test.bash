@@ -8,13 +8,13 @@ ERROR_EXIT () {
   exit 1
 }
 chmod 711 ./GreatestCommonDivisor.bash
-ANS=$(bash ./GreatestCommonDivisor.bash 24 32)
+ANS=$(sudo bash ./GreatestCommonDivisor.bash 24 32)
 if [ "$ANS" -eq 8 ] ; then
   exit 0
 else
   exit 1
 fi
-ANS=$(bash ./GreatestCommonDivisor.bash 125 65)
+ANS=$(sudo bash ./GreatestCommonDivisor.bash 125 65)
 if [ "$ANS" -eq 5 ] ; then
   exit 0
 else
