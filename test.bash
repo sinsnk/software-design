@@ -8,13 +8,18 @@ ERROR_EXIT () {
   exit 1
 }
 
+run_greatestcommondivisor(num1, num2, answer) {
+  ANS=$(bash ./GreatestCommonDivisor.bash $num1 $num2)
+  if [ "$ANS" -eq $answer ] ; then
+    exit 0
+  else
+    exit 1
+  fi
+}
+
 # 正
-ANS=$(bash ./GreatestCommonDivisor.bash 24 32)
-if [ "$ANS" -eq 8 ] ; then
-  exit 0
-else
-  exit 1
-fi
+run_greatestcommondivisor(24 32)
+
 ANS=$(bash ./GreatestCommonDivisor.bash 125 65)
 if [ "$ANS" -eq 5 ] ; then
   exit 0
