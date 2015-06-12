@@ -7,6 +7,4 @@
 
 language: bash
 script:
-- bash ./GreatestCommonDivisor.bash 125 65
-script:
-- bash ./GreatestCommonDivisor.bash 42 36
+- bash ./test.bash
