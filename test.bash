@@ -8,9 +8,9 @@ ERROR_EXIT () {
   exit 1
 }
 
-run_greatestcommondivisor(num1, num2, answer) {
-  ANS=$(bash ./GreatestCommonDivisor.bash $num1 $num2)
-  if [ "$ANS" -eq $answer ] ; then
+run_greatestcommondivisor() {
+  ANS=$(bash ./GreatestCommonDivisor.bash $1 $2)
+  if [ "$ANS" -eq $3 ] ; then
     exit 0
   else
     exit 1
@@ -18,7 +18,7 @@ run_greatestcommondivisor(num1, num2, answer) {
 }
 
 # 正
-run_greatestcommondivisor(24,32,8)
+run_greatestcommondivisor 24 32 8
 
 ANS=$(bash ./GreatestCommonDivisor.bash 125 65)
 if [ "$ANS" -eq 5 ] ; then
