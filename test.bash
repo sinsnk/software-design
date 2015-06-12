@@ -7,14 +7,13 @@ ERROR_EXIT () {
   rm -f $tmp-*
   exit 1
 }
-chmod 711 ./GreatestCommonDivisor.bash
-ANS=$(sudo bash ./GreatestCommonDivisor.bash 24 32)
+ANS=$(bash ./GreatestCommonDivisor.bash 24 32)
 if [ "$ANS" -eq 8 ] ; then
   exit 0
 else
   exit 1
 fi
-ANS=$(sudo bash ./GreatestCommonDivisor.bash 125 65)
+ANS=$(bash ./GreatestCommonDivisor.bash 125 65)
 if [ "$ANS" -eq 5 ] ; then
   exit 0
 else
