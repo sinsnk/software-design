@@ -18,7 +18,7 @@ run_greatestcommondivisor(num1, num2, answer) {
 }
 
 # 正
-run_greatestcommondivisor(24 32)
+run_greatestcommondivisor(24,32,8)
 
 ANS=$(bash ./GreatestCommonDivisor.bash 125 65)
 if [ "$ANS" -eq 5 ] ; then
