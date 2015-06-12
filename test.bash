@@ -8,7 +8,7 @@ ERROR_EXIT () {
   exit 1
 }
 
-run_greatestcommondivisor() {
+run_greatestcommondivisor_ok() {
   ANS=$(bash ./GreatestCommonDivisor.bash $1 $2)
   if [ "$ANS" -eq $3 ] ; then
     exit 0
@@ -16,23 +16,17 @@ run_greatestcommondivisor() {
     exit 1
   fi
 }
-
+run_greatestcommondivisor_ng() {
+  ANS=$(bash ./GreatestCommonDivisor.bash $1 $2)
+  if [ "$ANS" -eq $3 ] ; then
+    exit 1
+  else
+    exit 0
+  fi
+}
 # 正
-run_greatestcommondivisor 24 32 8
-
-ANS=$(bash ./GreatestCommonDivisor.bash 125 65)
-if [ "$ANS" -eq 5 ] ; then
-  exit 0
-else
-  exit 1
-fi
+run_greatestcommondivisor_ok 24 32 8
+run_greatestcommondivisor_ok 125 65 5
 
 # 誤
-ANS=$(bash ./GreatestCommonDivisor.bash 125 65)
-if [ "$ANS" -eq 1 ] ; then
-  exit 1
-else
-  exit 0
-fi
-# 変な値
-# bash ./GreatestCommonDivisor.bash hoge fuga
+run_greatestcommondivisor_ng 125 65 1
